@@ -5,7 +5,9 @@
 			<div><strong>Description:</strong> {{ post.body }}</div>
 		</div>
 		<div class="post__btns">
-			<button class="btn">Delete</button>
+			<my-button
+			@click="$emit('remove',post)" 
+			class="custom_btn">Delete</my-button>
 		</div>
 	</div>
 </template>
@@ -30,5 +32,14 @@ export default{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+	.custom_btn{
+		font-size: 16px;
+		padding: 5px 10px;
+		background-color: rgb(247, 168, 168);
+	}
+	.custom_btn:hover{
+		background-color: rgb(137, 9, 9);
+		border-color: rgb(137, 9, 9);
 	}
 </style>

@@ -1,17 +1,13 @@
 <template>
 	<form @submit.prevent>
 		<h4	h4 class="form_title">Creating new post</h4>
-		<input 
+		<my-input 
 		 	v-model="post.title"
-		 	class="input" 
-		 	type="text" 
-		 	placeholder="Title">
-		<input 
+		 	placeholder="Title"/>
+		<my-input 
 		 	v-model="post.body"
-		 	class="input" 
-		 	type="text" 
-			placeholder="Description">
-		<button class="btn" @click="createPost">Create</button>
+			placeholder="Description"/>
+		<my-button class="custom_btn" @click="createPost">Create</my-button>
 	</form>
 </template>
 <script>
@@ -46,27 +42,9 @@ form{
 		margin-top: 15px;
 		font-size: 20px;
 	}
-	.input{
-		width: 100%;
-		padding: 10px 15px;
-		border: 2px solid teal;
-		margin-top: 15px;
-	}
-	.btn{
-		padding: 10px 15px;
-		border: 2px solid teal;
-		margin-top: 15px;
+	
+	.custom_btn{
 		align-self: flex-end;
-		border-radius: 5px;
-		cursor: pointer;
-		transition:all 0.3s ease-in-out;
-		font-size: 18px;
-		font-weight: 500;
-		letter-spacing: 0.1em;
-		line-height: 1em;
-	}
-	.btn:hover{
-		background-color: rgb(78, 170, 170);
-		color: #fff;
+		margin-top: 15px;
 	}
 </style>
