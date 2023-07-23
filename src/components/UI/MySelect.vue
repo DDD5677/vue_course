@@ -1,7 +1,6 @@
 <template>
 	<select 
 	:value="value"
-	
 	@change="changeOption">
 		<option disabled value="">Select one of them</option>
 		<option 
@@ -27,7 +26,6 @@ export default{
 	},
 	methods:{
 		changeOption(event){
-			console.log(event)
 			this.$emit('update:value',event.target.value)
 		}
 	}
