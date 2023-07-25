@@ -2,7 +2,8 @@ import Main from "@/pages/Main";
 import PostPage from "@/pages/PostPage";
 import AboutPage from "@/pages/AboutPage";
 import PostIdPage from "@/pages/PostIdPage";
-
+import PostPageWithStore from "@/pages/PostPageWithStore";
+import PostPageCompositionApi from "@/pages/PostPageCompositionApi";
 import { createRouter, createWebHashHistory } from "vue-router";
 const routes = [
    {
@@ -20,6 +21,14 @@ const routes = [
    {
       path: "/posts/:id",
       component: PostIdPage,
+   },
+   {
+      path: "/store",
+      component: PostPageWithStore,
+   },
+   {
+      path: "/composition",
+      component: PostPageCompositionApi,
    },
 ];
 
